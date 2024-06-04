@@ -15,6 +15,8 @@ import SettingsPage from './components/SettingsPage';
 import NewsPage from './components/NewsPage';
 import GuidePage from './components/GuidePage';
 import FeaturesPage from './components/FeaturesPage';
+import SearchPage from './components/SearchPage';
+import NewsDetailPage from './components/NewsDetailPage';
 
 const App = () => {
   const isAuthenticated = useSelector(selectIsAuthenticated);
@@ -43,6 +45,8 @@ const App = () => {
           <Route path="/news" component={NewsPage} />
           <Route path="/guide" component={GuidePage} />
           <Route path="/features" component={FeaturesPage} />
+          <Route path="/search" component={SearchPage} />
+          <Route path="/news/:id" component={NewsDetailPage} />
         </Switch>
         <Footer />
       </div>
@@ -51,6 +55,7 @@ const App = () => {
 };
 
 export default App;
+
 
 
 
