@@ -42,11 +42,11 @@ const App = () => {
           <Route path="/settings">
             {isAuthenticated ? <SettingsPage /> : <LoginPage />}
           </Route>
-          <Route path="/news" component={NewsPage} />
           <Route path="/guide" component={GuidePage} />
           <Route path="/features" component={FeaturesPage} />
           <Route path="/search" component={SearchPage} />
-          <Route path="/news/:id" component={NewsDetailPage} />
+          <Route exact path="/news" component={NewsPage} />
+        <Route path="/news/:id" component={NewsDetailPage} />
         </Switch>
         <Footer />
       </div>
